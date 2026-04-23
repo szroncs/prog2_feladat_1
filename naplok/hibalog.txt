@@ -1,0 +1,3 @@
+[2026-04-23 19:53:55] [LAMBDA RIASZTÁS LOG] HOM-01 - érték: 43.11
+[2026-04-23 19:53:55] Kritikus hiba a(z) NYOM-01 szenzornál! Érték: 3.0046899062271946
+[2026-04-23 19:53:55] Kritikus hiba a(z) NYOM-01 szenzornál! Érték: 3.4507914602084737
