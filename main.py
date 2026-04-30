@@ -102,9 +102,12 @@ def main():
     # Generikus központ példányosítása
     kozpont = SzenzorKozpont[AlapSzenzor]()
 
-    # 6. Feliratkozás metódusreferenciával és lambdával
+    def naplozo_riasztas(s_id: str, val: float):
+        kozpont.naplo_iras(f"[RIASZTÁS LOG] {s_id} - érték: {val:.2f}")
+
+    # 6. Feliratkozás metódusreferenciával és külön függvénnyel (lambda helyett)
     kozpont.feliratkozas_riasztasra(konzolos_riasztas)
-    kozpont.feliratkozas_riasztasra(lambda s_id, val: kozpont.naplo_iras(f"[LAMBDA RIASZTÁS LOG] {s_id} - érték: {val:.2f}"))
+    kozpont.feliratkozas_riasztasra(naplozo_riasztas)
 
     # 5. Elemek hozzáadása indexelővel
     kozpont["HOM-01"] = HomersekletSzenzor("HOM-01")
